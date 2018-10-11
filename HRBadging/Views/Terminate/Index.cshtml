@@ -1,0 +1,51 @@
+﻿@model IEnumerable<HRBadging.Models.Badging.Terminate>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UpId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateJobTermination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BadgeTerminationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BadgeReturned)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateJobTermination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BadgeTerminationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BadgeReturned)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UpId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UpId })
+        </td>
+    </tr>
+}
+
+</table>

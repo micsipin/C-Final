@@ -1,0 +1,56 @@
+﻿@model HRBadging.Models.Badging.Terminate
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Terminate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Badge.SITA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Badge.SITA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateJobTermination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateJobTermination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BadgeTerminationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadgeTerminationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BadgeReturned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadgeReturned)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

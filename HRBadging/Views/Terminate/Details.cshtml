@@ -1,0 +1,50 @@
+﻿@model HRBadging.Models.Badging.Terminate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Terminate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Badge.BadgeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Badge.BadgeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateJobTermination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateJobTermination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BadgeTerminationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadgeTerminationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BadgeReturned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadgeReturned)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UpId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

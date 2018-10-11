@@ -1,0 +1,58 @@
+﻿@model HRBadging.Models.Badging.Badge
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Badge</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BadgeExp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadgeExp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasCustomSeal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasCustomSeal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomSealExp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomSealExp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SITA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SITA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BadgeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,6 @@
+﻿
+Enable-Migrations -ContextTypeName BadgingContext -MigrationsDirectory Migrations\HRBadging
+
+add-migration -verbose -ConfigurationTypeName HRBadging.Migrations.HR.Configuration "Relations"
+
+update-database -verbose -ConfigurationTypeName HRBadging.Migrations.HR.Configuration

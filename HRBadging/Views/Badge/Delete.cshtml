@@ -1,0 +1,64 @@
+﻿@model HRBadging.Models.Badging.Badge
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Badge</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BadgeExp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadgeExp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasCustomSeal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasCustomSeal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomSealExp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomSealExp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SITA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SITA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

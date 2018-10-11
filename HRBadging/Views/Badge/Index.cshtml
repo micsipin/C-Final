@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HRBadging.Models.Badging.Badge>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BadgeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BadgeExp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasCustomSeal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomSealExp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SITA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.BadgeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BadgeExp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasCustomSeal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomSealExp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.BadgeId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.BadgeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.BadgeId })
+        </td>
+    </tr>
+}
+
+</table>
