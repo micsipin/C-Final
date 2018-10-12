@@ -40,7 +40,7 @@ namespace HRBadging.Controllers
         // GET: Terminate/Create
         public ActionResult Create()
         {
-            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId");
+            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", "BadgeId");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace HRBadging.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId",  terminate.BadgeId);
+            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId",  "BadgeId");
             return View(terminate);
         }
 
@@ -74,7 +74,7 @@ namespace HRBadging.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", terminate.BadgeId);
+            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", "BadgeId");
 
             return View(terminate);
         }
@@ -92,7 +92,7 @@ namespace HRBadging.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", terminate.BadgeId);
+            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", "BadgeId");
             return View(terminate);
         }
 
