@@ -170,6 +170,10 @@
     <Compile Include="Migrations\HR\201810110349123_GoodSeed.Designer.cs">
       <DependentUpon>201810110349123_GoodSeed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\HR\201810111528017_badgebadge.cs" />
+    <Compile Include="Migrations\HR\201810111528017_badgebadge.Designer.cs">
+      <DependentUpon>201810111528017_badgebadge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\HR\Configuration.cs" />
     <Compile Include="Models\Badging\Badge.cs" />
     <Compile Include="Models\Badging\Employee.cs" />
@@ -254,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\HR\201810110349123_GoodSeed.resx">
       <DependentUpon>201810110349123_GoodSeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\HR\201810111528017_badgebadge.resx">
+      <DependentUpon>201810111528017_badgebadge.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

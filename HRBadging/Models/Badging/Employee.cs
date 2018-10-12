@@ -15,6 +15,6 @@ namespace HRBadging.Models.Badging
         public string FName { get; set; }
 
         public string BadgeId { get; set; }
-        public Badge Badge { get; set; }
+        public virtual Badge Badge { get; set; }
     }
 }

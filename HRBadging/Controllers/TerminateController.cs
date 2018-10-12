@@ -49,7 +49,7 @@ namespace HRBadging.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UpId,BadgeId,DateJobTermination,BadgeTerminationDate,BadgeReturned")] Terminate terminate)
+        public ActionResult Create([Bind(Include = "UpId,DateJobTermination,BadgeTerminationDate,BadgeReturned")] Terminate terminate)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace HRBadging.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", "SITA", terminate.BadgeId);
+            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId",  terminate.BadgeId);
             return View(terminate);
         }
 
@@ -74,7 +74,8 @@ namespace HRBadging.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", "SITA", terminate.BadgeId);
+            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", terminate.BadgeId);
+
             return View(terminate);
         }
 
@@ -91,7 +92,7 @@ namespace HRBadging.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", "SITA", terminate.BadgeId);
+            ViewBag.BadgeId = new SelectList(db.Badges, "BadgeId", terminate.BadgeId);
             return View(terminate);
         }
 

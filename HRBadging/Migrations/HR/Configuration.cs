@@ -31,7 +31,7 @@ namespace HRBadging.Migrations.HR
             context.SaveChanges();
 
             context.Terminates.AddOrUpdate(
-                t => new { t.UpId, t.DateJobTermination, t.BadgeTerminationDate, t.BadgeReturned }, DummyData.GetTerminates(context).ToArray());
+                t => new { t.UpId, t.BadgeId, t.DateJobTermination, t.BadgeTerminationDate, t.BadgeReturned }, DummyData.GetTerminates(context).ToArray());
             context.SaveChanges();
         }
         }

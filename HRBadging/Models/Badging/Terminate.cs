@@ -12,14 +12,14 @@ namespace HRBadging.Models.Badging
         [Key]
         [MaxLength(25)]
         public string UpId { get; set; }
-        public string BadgeId { get; set; }
         [Column(TypeName = "datetime2")]
         public DateTime DateJobTermination { get; set; }
         [Column(TypeName = "datetime2")]
         public DateTime BadgeTerminationDate { get; set; }
         public bool BadgeReturned { get; set; }
 
-        
-        public Badge Badge { get; set; }
+
+        public string BadgeId { get; set; }
+        public virtual Badge Badge { get; set; }
     }
 }
